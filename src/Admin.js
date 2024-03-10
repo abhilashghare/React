@@ -6,11 +6,10 @@ const Admin = () => {
 
     return (
         <div className="admin">
-            {error && <div>{error}</div>}
             {loading && <div>Loading....</div>}
             <h2>Admin Page</h2>
             {data && <p>Author is {data.name}</p>}
-            
+            {error && <div className="admin-err-message">{error}</div>}
         </div>
     );
 }
