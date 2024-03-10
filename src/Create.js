@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 const Create = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
-    const [author, setAuthor] = useState('')
+    const [author, setAuthor] = useState('Abhi')
     const [loading, setIsLoading] = useState(false);
     const history = useHistory();
 
@@ -49,9 +49,6 @@ const Create = () => {
                 </select>
                 {!loading && <button>Add Blog</button>}
                 {loading && <button disabled>Adding blog..</button>}
-                <p>{title}</p>
-                <p>{body}</p>
-                <p>{author}</p>
             </form>
         </div>
     );

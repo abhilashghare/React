@@ -5,6 +5,7 @@ import Create from './Create';
 import BlogDetails from './BlogDetails';
 import Admin from './Admin';
 import NotFound from './NotFound';
+import Login from './Login';
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
         <div className='content'>
           <Switch>
             <Route exact path="/">
+              <Login />
+            </Route>
+            <Route path="/home">
               <Home />
             </Route>
             <Route path="/create">
@@ -25,6 +29,9 @@ function App() {
             </Route>
             <Route path="/admin">
               <Admin />
+            </Route>
+            <Route path="/login">
+              <Login />
             </Route>
             <Route path="*">
               <NotFound />
