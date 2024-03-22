@@ -19,7 +19,7 @@ const Create = () => {
         }).then(() => {
             console.log('New Blog Added');
             setIsLoading(false);
-            history.push('/');
+            history.push('/home');
         })
     }
 

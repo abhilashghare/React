@@ -10,7 +10,7 @@ const BlogDetails = () => {
         fetch('http://localhost:3001/blogs/' + id, {
             method: 'DELETE'
         }).then(() => {
-            history.push('/');
+            history.push('/home');
         })
     }
     return (

@@ -16,6 +16,8 @@ function Login() {
         if (username === 'abhi' && password === 'abhi') {
             history.push('/home')
         } else {
+            setPassword('')
+            setUsername('')
             setErrorMessage('Invalid username or password');
         }
         // Add authentication logic here
@@ -27,11 +29,14 @@ function Login() {
             <form onSubmit={handleLogin}>
                 <div className="form-group">
                     <label>Username:</label>
-                    <input className="form-control" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <input className="form-control" type="text" required
+                     value={username} 
+                     onChange={(e) => setUsername(e.target.value)} />
                 </div>
                 <div className="form-group">
                     <label>Password:</label>
-                    <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input className="form-control" type="password" 
+                    value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button className="btn">Login</button>
             </form>
